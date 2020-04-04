@@ -1,0 +1,19 @@
+<h1>Login To Your Account</h1>
+<h2>Enter your email and password</h2>
+
+<div class="formWrapper">
+  <form id="sessionCreate" action="/api/tokens" method="POST">
+    <div class="formError"></div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Email</div>
+      <input type="email" name="email" placeholder="ilovepizza@gmail.com" />
+    </div>
+    <div class="inputWrapper">
+      <div class="inputLabel">Your Password</div>
+      <input type="password" name="password" placeholder="*********" />
+    </div>
+    <div class="inputWrapper ctaWrapper">
+      <button type="submit" class="cta gray">Login</button>
+    </div>
+  </form>
+</div>

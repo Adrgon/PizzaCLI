@@ -1,0 +1,70 @@
+<h1>Create an Order</h1>
+<h2>One step to a delicious meal!</h2>
+<a class="backButton" href="/orders/all">Back</a>
+<hr />
+
+<table id="ordersListTable" class="menuTable">
+    <tr>
+        <th colspan="5">MENU</th>
+    </tr>
+    <tr>
+        <th>Pizza</th>
+        <th>Ingredients</th>
+        <th>Price</th>
+        <th>Is vegetarian</th>
+        <th>Is vegan</th>
+    </tr>
+    <tr>
+        <td>THE REUBEN</td>
+        <td>1000 island dressing, canadian bacon, sauerkraut, mozzarella</td>
+        <td>35.55$</td>
+        <td ><input type="checkbox" disabled="disabled"></td>
+        <td><input type="checkbox" disabled="disabled"></td>
+    </tr>
+    <tr>
+        <td>BUFFALO CHICKEN</td>
+        <td>hot sauce, grilled chicken, onion, mozzarella, cheddar</td>
+        <td>30.50$</td>
+        <td><input type="checkbox" disabled="disabled"></td>
+        <td><input type="checkbox" disabled="disabled"></td>
+    </tr>
+    <tr>
+        <td>VEGGIE&#39;S VICTORY</td>
+        <td>yellow curry sauce, mushroom, onion, red chilli pepper, dried tomato, mozzarella</td>
+        <td>28.55$</td>
+        <td><input type="checkbox" disabled="disabled" checked="checked"></td>
+        <td><input type="checkbox" disabled="disabled"></td>
+    </tr>
+    <tr>
+        <td>CARROT CRAZE</td>
+        <td>sliced carrot, mushroom, pickles, green pepper, tomato, black olive, smoked chick peas</td>
+        <td>19.99$</td>
+        <td><input type="checkbox" disabled="disabled" checked="checked"></td>
+        <td><input type="checkbox" disabled="disabled" checked="checked"></td>      
+    </tr>
+</table>
+
+<div class="formWrapper">
+    <form id="ordersCreate" action="/api/orders" method="POST">
+        <div class="formError"></div>
+
+        <div class="inputWrapper">
+            <div class="inputLabel">Pizza</div>
+            <select name="pizzaId">
+                <option value="1" selected>THE REUBEN</option>
+                <option value="2">BUFFALO CHICKEN</option>
+                <option value="3">VEGGIE&#39;S VICTORY</option>
+                <option value="4">CARROT CRAZE</option>
+            </select>
+        </div>
+
+        <div class="inputWrapper">
+            <div class="inputLabel">Amount</div>
+            <input type="number" name="amount" min="1" max="{global.maxAmountPerOrderItem}" value="1">
+        </div>
+
+        <div class="inputWrapper">
+            <button style="margin-left:150px" type="submit" class="cta gray">Create Order</button>
+        </div>
+    </form>
+</div>

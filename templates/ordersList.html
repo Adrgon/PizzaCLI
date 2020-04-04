@@ -1,0 +1,25 @@
+<h1>Shopping cart</h1>
+<h2>You may create up to {global.maxOrders} orders</h2>
+<hr />
+<h2>Let the cheesy feast begin!</h2>
+
+<table id="ordersListTable">
+    <tr>
+        <th>Order date</th>
+        <th>Details</th>
+        <th>Price</th>
+        <th width="auto">Edit / Delete </th>
+        <th width="auto">Purchase</th>
+    </tr>
+    <tr id="noOrdersMessage">
+        <td colspan="5">You have no orders, please create one!</td>
+    </tr>
+</table>
+
+<div id="maxOrdersMessage" style="margin-top:50px">
+    <h2>You reached maximum amount of orders.</br>Make payments or delete orders to make new ones.</h2>
+</div>
+
+<div id="createOrderCTA" class="ctaWrapper">
+    <a class="cta gray" href="orders/create">Create a Order</a>
+</div>
